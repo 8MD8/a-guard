@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinus Allergy Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- صفحة تسجيل الدخول -->
+    <div id="login-page">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- صفحة الترحيب -->
+    <div id="welcome-page" style="display: none;">
+        <h2 id="greeting-message">Welcome!</h2>
+        <button onclick="startApp()">Okay</button>
+    </div>
+
+    <!-- الأسئلة الصحية -->
+    <div id="health-questions" style="display: none;">
+        <h3>How are you feeling today?</h3>
+        <select id="health-status">
+            <option value="normal">Normal</option>
+            <option value="mild">Mild Symptoms</option>
+            <option value="severe">Severe Symptoms</option>
+        </select>
+        <button onclick="checkWeather()">Next</button>
+    </div>
+
+    <!-- حالة الطقس والنصائح -->
+    <div id="weather-info" style="display: none;">
+        <h3>Weather and Advice</h3>
+        <p id="weather-message"></p>
+        <p id="advice-message"></p>
+    </div>
+
+    <!-- النصائح -->
+    <div id="tips-section" style="display: none;">
+        <h3>General Tips</h3>
+        <ul id="tips-list">
+            <li>Stay hydrated.</li>
+            <li>Use your inhaler regularly.</li>
+            <li>Avoid high-pollen areas.</li>
+        </ul>
+    </div>
+
+    <!-- زر تغيير اللغة -->
+    <button onclick="changeLanguage()">Change Language</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
